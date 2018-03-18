@@ -73,7 +73,7 @@ public class Veicolo
      */
     public void printVelocita()
     {
-        System.out.println(Double.toString(this.velocita));
+        System.out.printf("%.2f\n", this.velocita);
     }
 
     /**
@@ -81,18 +81,18 @@ public class Veicolo
      */
     public void printAccelerazione()
     {
-        System.out.println(Double.toString(this.accelerazione));
+        System.out.printf("%.2f\n", this.accelerazione);
     }
 
     /**
-     * Metodo protetto per l'inizializzazione dei dati.
+     * Metodo privato per l'inizializzazione dei dati.
      * 
      * @param newVelocita
      *            la nuova velocità del veicolo
      * @param newAccelerazione
      *            la nuova accelerazione del veicolo
      */
-    protected void set(double newVelocita, double newAccelerazione)
+    private void set(double newVelocita, double newAccelerazione)
     {
         this.velocita = newVelocita;
         this.accelerazione = newAccelerazione;
