@@ -63,7 +63,7 @@ public class Automobile extends Veicolo
     }
 
     /**
-     * Metodo protetto per l'inizializzazione dei dati.
+     * Metodo privato per l'inizializzazione dei dati.
      * 
      * @param newVelocita
      *            la nuova velocità dell'automobile
@@ -74,9 +74,10 @@ public class Automobile extends Veicolo
      * @param newAvviata
      *            il nuovo parametro 'avviata' dell'automobile
      */
-    protected void set(double newVelocita, double newAccelerazione, String newTarga, boolean newAvviata)
+    private void set(double newVelocita, double newAccelerazione, String newTarga, boolean newAvviata)
     {
-        super.set(newVelocita, newAccelerazione);
+        super.setVelocita(newVelocita);
+        super.setAccelerazione(newAccelerazione);
         this.targa = newTarga;
         this.avviata = newAvviata;
     }
